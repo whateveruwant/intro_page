@@ -1,50 +1,35 @@
 import React, { Component } from 'react';
 import './App.css';
+import Tab from './introPage/Tab'
+import About from './introPage/About'
+import Services from './introPage/Services'
+import Team from './introPage/Team'
+import Contact from './introPage/Contact'
+import Footer from './introPage/Footer'
 import './css/agency.css';
-import './css/agency.min.css';
+import './vendor/font-awesome/css/font-awesome.css';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-          <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
-            <div class="container">
-              <a class="navbar-brand js-scroll-trigger" href="#page-top">Intro Page</a>
-              <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                Menu
-                <i class="fa fa-bars"></i>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav text-uppercase ml-auto">
-                  <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="#services">Services</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="#portfolio">Portfolio</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="#about">About</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="#team">Team</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
-                  </li>
-                </ul>
-              </div>
+        <Tab/>
+      
+        <header class="masthead">
+          <div class="container">
+            <div class="intro-text">
+              <div class="intro-lead-in">Dreams come true!</div>
+              <div class="intro-heading text-uppercase">The smarter way to invest in art</div>
+              <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#services">Tell Me More</a>
             </div>
-          </nav>
+          </div>
+        </header>
 
-          <header class="masthead">
-            <div class="container">
-              <div class="intro-text">
-                <div class="intro-lead-in">Welcome To Our Studio!</div>
-                <div class="intro-heading text-uppercase">It's Nice To Meet You</div>
-                <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#services">Tell Me More</a>
-              </div>
-            </div>
-          </header>
+        <Services/>
+        <About/>
+        <Team/>
+        <Contact/>
+        <Footer/>
       </div>
     );
   }
